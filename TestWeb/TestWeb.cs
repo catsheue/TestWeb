@@ -26,5 +26,12 @@ namespace TestWeb
             Assert.IsTrue(reactCrepe.IsVisible);
 
         }
+        
+        [TestCleanup]
+        public void CleanUp()
+        {
+            Driver.Close();
+            Driver.Quit();
+        }
     }
 }
